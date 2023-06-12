@@ -23,5 +23,5 @@ select title, price from hardware where tag = 'new' order by price desc limit 1;
 insert into hardware (title, price, amount, tag) 
 values ('Ноутбук Lenovo 2BXKQ7E9XD', '54500', '1', 'new');
 -- 9. Найти и удалить по названию из базы ошибочно добавленный товар Очки PS VR 2.
-delete from hardware 
-where id in (18);
+delete from hardware
+where hardware.title = 'Очки PS VR 2' and hardware.id > 0;
